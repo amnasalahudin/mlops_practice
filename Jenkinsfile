@@ -10,7 +10,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
         IMAGE_NAME = 'amnasalahudin/flask-app-test' // Include Docker Hub username here
         TAG = 'latest' // Define your Docker image tag here
-        DOCKER_HOST = 'tcp://localhost:2375' // Define Docker daemon endpoint here
+        DOCKER_HOST = 'tcp://localhost:2375'
     }
     
     stages {
