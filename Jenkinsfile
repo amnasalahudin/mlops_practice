@@ -6,7 +6,7 @@ pipeline {
     }
     
     environment {
-        // Use Jenkins Credentials to store Docker Hub login
+       
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
         IMAGE_NAME = 'flask-app-test' // Define your Docker image name here
         TAG = 'latest' // Define your Docker image tag here
