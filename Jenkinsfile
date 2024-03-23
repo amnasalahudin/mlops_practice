@@ -1,7 +1,6 @@
 pipeline {
     agent any
-    
-   
+
     triggers {
         githubPush()
     }
@@ -11,6 +10,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
         IMAGE_NAME = 'flask-app-test' // Define your Docker image name here
         TAG = 'latest' // Define your Docker image tag here
+        DOCKER_HOST = 'tcp://localhost:2375' // Define Docker daemon endpoint here
     }
     
     stages {
@@ -45,7 +45,6 @@ pipeline {
     post {
         success {
             // Notifying the administrator via email
-            // Note: Make sure Jenkins is configured to send emails. If not, use plugins or configure SMTP settings.
             mail to: 'amnasalahudin123@gmail.com',
                  subject: "Successful Docker Image Build",
                  body: "The Docker image ${IMAGE_NAME}:${TAG} has been built and pushed successfully."
