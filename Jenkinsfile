@@ -24,7 +24,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Building the Docker image from the Dockerfile in the current directory
+                    
                     docker.build("${IMAGE_NAME}:${TAG}")
                 }
             }
