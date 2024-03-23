@@ -19,4 +19,4 @@ jobs:
         pip install flask pytest
         # Add any other dependencies your project needs
     - name: Run tests
-      run: pytest
+      run: pytest test.py
