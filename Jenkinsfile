@@ -8,7 +8,7 @@ pipeline {
     environment {
        
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
-        IMAGE_NAME = 'flask-app-test' // Define your Docker image name here
+        IMAGE_NAME = 'flask-app-test' 
         TAG = 'latest' // Define your Docker image tag here
         DOCKER_HOST = 'tcp://localhost:2375' // Define Docker daemon endpoint here
     }
